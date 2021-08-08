@@ -5,7 +5,7 @@ import { IconWrapper, Icon, Text } from "./Scoreboard.styles";
 
 const ScoreItem: React.FC<{
   score: ResultModel;
-}> = ({ score }) => {
+}> = ({ score }: { score: ResultModel }) => {
   const player = appData.playOptions.find((item) => item.id === score?.player);
   const computer = appData.playOptions.find(
     (item) => item.id === score?.computer

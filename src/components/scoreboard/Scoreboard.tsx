@@ -2,9 +2,10 @@ import { Container, TextWrapper } from "./Scoreboard.styles";
 import { ResultModel } from "../../models/result.interface";
 import ScoreItem from "./ScoreItem";
 
-const Scoreboard: React.FC<{
+interface ScoreboardProps {
   scores: ResultModel[];
-}> = ({ scores }) => {
+}
+const Scoreboard: React.FC<ScoreboardProps> = ({ scores }: ScoreboardProps) => {
   return (
     <Container>
       <TextWrapper>

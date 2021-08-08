@@ -4,15 +4,14 @@ import { ChoiceItemModel } from "../../models/choice.interface";
 interface ChoiceProps {
   data: ChoiceItemModel | undefined;
   status?: boolean | undefined;
-  pointer?: boolean;
   handleClick?: (val: number) => Promise<void>;
 }
 
-const ChoiceCard = ({
+const ChoiceCard: React.FC<ChoiceProps> = ({
   data,
   handleClick,
   status,
-}: ChoiceProps): JSX.Element => {
+}: ChoiceProps) => {
   return (
     <Container
       pointer={!!handleClick}

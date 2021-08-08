@@ -5,11 +5,17 @@ import { ResultModel } from "../../models/result.interface";
 import { ChoiceItemModel } from "../../models/choice.interface";
 import { getReultStatus } from "../../utils";
 
-const PlayResult: React.FC<{
+interface PlayResultProps {
   appData: ChoiceItemModel[];
   result: ResultModel;
   playAgain: () => void;
-}> = ({ appData, result, playAgain }) => {
+}
+
+const PlayResult: React.FC<PlayResultProps> = ({
+  appData,
+  result,
+  playAgain,
+}: PlayResultProps) => {
   const player = appData.find((item) => item.id === result?.player);
   const computer = appData.find((item) => item.id === result?.computer);
 

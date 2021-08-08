@@ -10,7 +10,7 @@ interface GameChoiceProps {
 const GameChoiceContainer: React.FC<GameChoiceProps> = ({
   playOptions,
   handleClick,
-}) => {
+}: GameChoiceProps) => {
   return (
     <>
       <Text>Select an option to play the game:</Text>
