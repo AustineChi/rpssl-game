@@ -17,7 +17,7 @@ const ChoiceCard: React.FC<ChoiceProps> = ({
       pointer={!!handleClick}
       onClick={() => data && handleClick?.(data?.id)}
     >
-      <IconBox status={status}>
+      <IconBox status={status}  shadow={!!handleClick}>
         <IconWrapper>
           <Icon src={data?.icon} alt={data?.name} />
         </IconWrapper>

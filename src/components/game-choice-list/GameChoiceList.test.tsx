@@ -1,25 +1,25 @@
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import GameChoiceContainer from "./index";
+import GameChoiceList from "./index";
 import mockData from "../../mock";
 
-describe("<GameChoiceContainer />", () => {
+describe("<GameChoiceList />", () => {
   const handleClick = jest.fn();
 
   beforeEach(cleanup);
 
-  test("Renders GameChoiceContainer without crashing", () => {
+  test("Renders GameChoiceList without crashing", () => {
     render(
-      <GameChoiceContainer
+      <GameChoiceList
         playOptions={mockData.playOptions}
         handleClick={handleClick}
       />
     );
   });
 
-  test("should display GameChoiceContainer items", () => {
+  test("should display GameChoiceList items", () => {
     const { getByText, getByAltText } = render(
-      <GameChoiceContainer
+      <GameChoiceList
         playOptions={mockData.playOptions}
         handleClick={handleClick}
       />

@@ -1,6 +1,6 @@
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import GameChoiceContainer from "./index";
+import GameChoiceList from "./index";
 
 describe("<scoreboard />", () => {
   const scores = [
@@ -24,11 +24,11 @@ describe("<scoreboard />", () => {
   beforeEach(cleanup);
 
   test("Renders scoreboard without crashing", () => {
-    render(<GameChoiceContainer scores={scores} />);
+    render(<GameChoiceList scores={scores} />);
   });
 
   test("should display scoreboard results", () => {
-    const { getByText } = render(<GameChoiceContainer scores={scores} />);
+    const { getByText } = render(<GameChoiceList scores={scores} />);
 
     const resultOne = getByText(scores[0].results);
     const resultTwo = getByText(scores[1].results);

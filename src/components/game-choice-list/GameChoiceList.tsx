@@ -1,16 +1,16 @@
 import ChoiceCard from "../choice-card";
-import { Container, Text } from "./GameChoiceContainer.styles";
+import { Container, Text } from "./GameChoiceList.styles";
 import { ChoiceItemModel } from "../../models/choice.interface";
 
-interface GameChoiceProps {
+interface GameChoiceListProps {
   playOptions: ChoiceItemModel[];
   handleClick: (val: number) => Promise<void>;
 }
 
-const GameChoiceContainer: React.FC<GameChoiceProps> = ({
+const GameChoiceList: React.FC<GameChoiceListProps> = ({
   playOptions,
   handleClick,
-}: GameChoiceProps) => {
+}: GameChoiceListProps) => {
   return (
     <>
       <Text>Select an option to play the game:</Text>
@@ -24,4 +24,4 @@ const GameChoiceContainer: React.FC<GameChoiceProps> = ({
   );
 };
 
-export default GameChoiceContainer;
+export default GameChoiceList;

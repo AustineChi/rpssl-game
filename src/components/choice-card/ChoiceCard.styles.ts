@@ -3,6 +3,7 @@ import { device } from "../../utils";
 
 type IconBoxInterface = {
   status?: boolean | undefined;
+  shadow: boolean
 };
 
 type ContainerInterface = {
@@ -48,7 +49,7 @@ export const IconBox = styled.div<IconBoxInterface>`
     margin: 1.25rem;
   }
   ${(props) =>
-    props.status === undefined &&
+    props.shadow &&
     `
   &:hover {
     transform: translateY(-3px);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GameChoiceContainer from "./components/game-choice-container";
+import GameChoiceList from "./components/game-choice-list";
 import PlayResult from "./components/play-result";
 import Scoreboard from "./components/scoreboard";
 import { ResultModel } from "./models/result.interface";
@@ -40,7 +40,7 @@ const App = () => {
             result={result}
           />
         ) : (
-          <GameChoiceContainer
+          <GameChoiceList
             playOptions={appData.playOptions}
             handleClick={handleClick}
           />
