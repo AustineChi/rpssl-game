@@ -3,7 +3,7 @@ import { Container, ScoreWrapper, HeaderText } from "./PlayResult.styles";
 import { FlexContainer } from "../../styles/main.styles";
 import { ResultModel } from "../../models/result.interface";
 import { ChoiceItemModel } from "../../models/choice.interface";
-import { getReultStatus } from "../../utils";
+import { getResultStatus } from "../../utils";
 
 interface PlayResultProps {
   appData: ChoiceItemModel[];
@@ -25,7 +25,7 @@ const PlayResult: React.FC<PlayResultProps> = ({
         <HeaderText>Player</HeaderText>
         <ChoiceCard
           data={player}
-          status={getReultStatus(result?.results)?.player}
+          status={getResultStatus(result?.results)?.player}
         />
       </FlexContainer>
       <ScoreWrapper>
@@ -36,7 +36,7 @@ const PlayResult: React.FC<PlayResultProps> = ({
         <HeaderText>Computer</HeaderText>
         <ChoiceCard
           data={computer}
-          status={getReultStatus(result?.results)?.computer}
+          status={getResultStatus(result?.results)?.computer}
         />
       </FlexContainer>
     </Container>

@@ -21,7 +21,7 @@ export async function sendPost(url: string, param: any) {
   return res.json();
 }
 
-export function getReultStatus(val: string) {
+export function getResultStatus(val: string) {
   if (val === "win") {
     return {
       player: true,
